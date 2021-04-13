@@ -29,18 +29,18 @@ public class Experience {
 			orphanRemoval = true
 	)
 	@JoinColumn(name = "experience_id")
-	private List<Responsibility> responsibiilities = new ArrayList<>();
+	private List<Responsibility> responsibilities = new ArrayList<>();
 	
 	
 	
 	public Experience() {}
 
-	public Experience(String company, String title, String dates, List<Responsibility> responsibiilities) {
+	public Experience(String company, String title, String dates, List<Responsibility> responsibilities) {
 		super();
 		this.company = company;
 		this.title = title;
 		this.dates = dates;
-		this.responsibiilities = responsibiilities;
+		this.responsibilities = responsibilities;
 	}
 	
 	public void setId(Long id) {
@@ -64,17 +64,17 @@ public class Experience {
 	public void setDates(String dates) {
 		this.dates = dates;
 	}
-	public List<Responsibility> getResponsibiilities() {
-		return responsibiilities;
+	public List<Responsibility> getResponsibilities() {
+		return responsibilities;
 	}
-	public void setResponsibiilities(List<Responsibility> responsibiilities) {
-		this.responsibiilities = responsibiilities;
+	public void setResponsibiilities(List<Responsibility> responsibilities) {
+		this.responsibilities = responsibilities;
 	}
 
 	@Override
 	public String toString() {
 		return "Experience [id=" + id + ", company=" + company + ", title=" + title + ", dates=" + dates
-				+ ", responsibiilities=" + responsibiilities + "]";
+				+ ", responsibilities=" + responsibilities + "]";
 	}
 	
 }
